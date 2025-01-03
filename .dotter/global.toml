@@ -18,3 +18,9 @@ default_target_type = "automatic"
 
 [ghostty.files]
 "ghostty/config" = "~/.config/ghostty/config"
+
+[hypr.files]
+"hypr/binds.conf" = "~/.config/hypr/binds.conf"
+"hypr/hyprland_home.conf" = "~/.config/hypr/hyprland.conf"
+"hypr/window_rules.conf" = "~/.config/hypr/window_rules.conf"
+"hypr/monitor/home.conf" = "~/.config/hypr/monitor.conf"
