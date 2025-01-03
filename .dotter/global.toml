@@ -10,3 +10,11 @@ dotter = ""
 
 [settings]
 default_target_type = "automatic"
+
+[zsh.files]
+"zsh/.zshrc" = "~/.zshrc"
+"zsh/.zshenv" = "~/.zshenv"
+"zsh/starship.toml" = "~/.config/starship.toml"
+
+[ghostty.files]
+"ghostty/config" = "~/.config/ghostty/config"
