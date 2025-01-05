@@ -5,7 +5,7 @@ i use dotter to manage my dotfiles: https://github.com/SuperCuber/dotter
 
 
 # zsh
-`sudo pacman -S zsh starship exa fd feh ripgrep fzf`
+`sudo pacman -S zsh starship exa fd feh ripgrep fzf bat`
 
 # ghostty
 `sudo pacman -S ttf-jetbrains-mono-nerd ghostty`

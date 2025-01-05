@@ -63,11 +63,7 @@ bindkey '^n' history-search-forward
 bindkey '^H' backward-kill-word
 
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+export EDITOR='nvim'
 
 alias l="exa -la"
 alias ls="exa"
@@ -83,3 +79,4 @@ alias color="hyprpicker -a"
 alias picker="hyprpicker -a"
 alias image="feh"
 alias "code ,"="code ."
+alias cat="bat --paging=never --plain"
