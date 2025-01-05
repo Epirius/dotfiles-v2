@@ -37,7 +37,8 @@ zinit cdreplay -q
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2
 
 # fzf
 eval "$(fzf --zsh)"
@@ -80,3 +81,7 @@ alias picker="hyprpicker -a"
 alias image="feh"
 alias "code ,"="code ."
 alias cat="bat --paging=never --plain"
+
+# showing hidden files and folders for zsh completion
+compinit
+_comp_options+=(globdots)
