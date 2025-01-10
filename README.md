@@ -9,3 +9,7 @@ i use dotter to manage my dotfiles: https://github.com/SuperCuber/dotter
 
 # ghostty
 `sudo pacman -S ttf-jetbrains-mono-nerd ghostty`
+
+# hyprland
+`sudo pacman -S waybar`
+`paru -S walker`
