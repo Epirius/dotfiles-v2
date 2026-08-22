@@ -10,6 +10,7 @@ fi
 
 # sourcing zinit
 source "${ZINIT_HOME}/zinit.zsh"
+. "$HOME/.cargo/env"
 
 # starship prompt
 eval "$(starship init zsh)"
@@ -21,6 +22,7 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light agkozak/zsh-z
 zinit light Aloxaf/fzf-tab
+zinit light paulirish/git-open
 
 # snippets (oh my zsh)
 zinit snippet OMZP::git
@@ -68,7 +70,7 @@ export EDITOR='nvim'
 
 alias l="exa -la"
 alias ls="exa"
-alias find="fd"
+#alias find="fd"
 alias vim="nvim"
 alias ..="cd .."
 alias reload="source ~/.zshrc"
@@ -81,7 +83,37 @@ alias picker="hyprpicker -a"
 alias image="feh"
 alias "code ,"="code ."
 alias cat="bat --paging=never --plain"
+alias neofetch="fastfetch"
+alias hx="helix"
+
+export PATH="/home/fk/.local/bin:/home/fk/.bun/bin:$PATH"
+
+
+fastfetch
 
 # showing hidden files and folders for zsh completion
 compinit
 _comp_options+=(globdots)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# pnpm
+export PNPM_HOME="/home/fk/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/home/fk/.bun/_bun" ] && source "/home/fk/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
