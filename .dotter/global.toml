@@ -24,3 +24,6 @@ default_target_type = "automatic"
 "hypr/hyprland_home.conf" = "~/.config/hypr/hyprland.conf"
 "hypr/window_rules.conf" = "~/.config/hypr/window_rules.conf"
 "hypr/monitor/home.conf" = "~/.config/hypr/monitor.conf"
+
+[wireplumber.files]
+"wireplumber/wireplumber.conf.d/51-disable-suspension.conf" = "~/.config/wireplumber/wireplumber.conf.d/51-disable-suspension.conf"
